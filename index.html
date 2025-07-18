@@ -21,8 +21,8 @@
                     </div>
                     <div class="ca-box">
                         <span class="ca-label">CA:</span>
-                        <span class="ca-address">7xKXtg2CW9zAkf9y1Dddq3</span>
-                        <button class="copy-btn" onclick="copyToClipboard()">📋</button>
+                        <span class="ca-address">....................pump</span>
+                        <button class="copy-btn" onclick="copyToClipboard()">Copy</button>
                     </div>
                 </div>
                 <nav class="nav-menu">
@@ -510,13 +510,17 @@
     <script>
         // Copy contract address to clipboard
         function copyToClipboard() {
-            const address = "7xKXtg2CW9zAkf9y1Dddq3";
+            const address = "....................pump";
             navigator.clipboard.writeText(address).then(() => {
                 const btn = document.querySelector('.copy-btn');
                 const originalText = btn.innerHTML;
-                btn.innerHTML = '✅';
+                btn.innerHTML = 'Copied!';
+                btn.style.background = '#00d084';
+                btn.style.borderColor = '#00d084';
                 setTimeout(() => {
                     btn.innerHTML = originalText;
+                    btn.style.background = '#333333';
+                    btn.style.borderColor = '#444444';
                 }, 2000);
             });
         }

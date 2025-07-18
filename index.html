@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UBERscan - Driver Leaderboard</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <h1 class="logo">UBERscan</h1>
+                    <div class="price-badge">
+                        <span class="close-icon">×</span>
+                        <span class="price">$3.39 XRP</span>
+                    </div>
+                    <div class="ca-box">
+                        <span class="ca-label">CA:</span>
+                        <span class="ca-address">7xKXtg2CW9zAkf9y1Dddq3</span>
+                        <button class="copy-btn" onclick="copyToClipboard()">📋</button>
+                    </div>
+                </div>
+                <nav class="nav-menu">
+                    <a href="#" class="nav-link">Trades</a>
+                    <a href="#" class="nav-link">Tokens</a>
+                    <a href="#" class="nav-link active">Leaderboard</a>
+                </nav>
+                <div class="header-actions">
+                    <div class="search-icon">🔍</div>
+                    <button class="connect-wallet-btn">Connect Wallet</button>
+                    <div class="settings-icon">⚙️</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="tagline-section">
+                <h3 class="tagline">Track the Top Uber Pajeets in Realtime</h3>
+            </div>
+            <div class="leaderboard-header">
+                <h2 class="leaderboard-title">Realized PnL Leaderboard</h2>
+                <div class="time-filters">
+                    <button class="filter-btn active" onclick="filterLeaderboard('daily')">Daily</button>
+                    <button class="filter-btn" onclick="filterLeaderboard('weekly')">Weekly</button>
+                    <button class="filter-btn" onclick="filterLeaderboard('monthly')">Monthly</button>
+                </div>
+            </div>
+
+            <!-- Leaderboard List -->
+            <div class="leaderboard-list">
+                <!-- Rank 1 -->
+                <div class="leaderboard-item rank-1">
+                    <div class="rank-section">
+                        <div class="trophy">🏆</div>
+                        <div class="profile-pic">
+                            <img src="1.jpg" alt="Pajeet P.">
+                        </div>
+                        <div class="name-section">
+                            <span class="driver-name">Pajeet P.</span>
+                            <span class="platform-icon">✕</span>
+                            <span class="handle">JDd3hy</span>
+                        </div>
+                    </div>
+                    <div class="stats-section">
+                        <span class="win-ratio"><span class="wins">32</span>/<span class="total">58</span></span>
+                        <div class="pnl-section">
+                            <div class="xrp-amount">+675.95 XRP</div>
+                            <div class="usd-amount">($120,754.1)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rank 2 -->
+                <div class="leaderboard-item">
+                    <div class="rank-section">
+                        <div class="rank-number">2</div>
+                        <div class="profile-pic">
+                            <img src="2.jpg" alt="Raj S.">
+                        </div>
+                        <div class="name-section">
+                            <span class="driver-name">Raj S.</span>
+                            <span class="platform-icon">✕</span>
+                            <span class="telegram-icon">🔵</span>
+                            <span class="handle">suqh5s</span>
+                        </div>
+                    </div>
+                    <div class="stats-section">
+                        <span class="win-ratio"><span class="wins">219</span>/<span class="losses">138</span></span>
+                        <div class="pnl-section">
+                            <div class="xrp-amount">+474.37 XRP</div>
+                            <div class="usd-amount">($84,743.5)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rank 3 -->
+                <div class="leaderboard-item">
+                    <div class="rank-section">
+                        <div class="rank-number">3</div>
+                        <div class="profile-pic">
+                            <img src="3.jpg" alt="Sandeep K.">
+                        </div>
+                        <div class="name-section">
+                            <span class="driver-name">Sandeep K.</span>
+                            <span class="platform-icon">✕</span>
+                            <span class="handle">CyaE1V</span>
+                        </div>
+                    </div>
+                    <div class="stats-section">
+                        <span class="win-ratio"><span class="wins">150</span>/<span class="losses">170</span></span>
+                        <div class="pnl-section">
+                            <div class="xrp-amount">+305.73 XRP</div>
+                            <div class="usd-amount">($54,617.5)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rank 4 -->
+                <div class="leaderboard-item">
+                    <div class="rank-section">
+                        <div class="rank-number">4</div>
+                        <div class="profile-pic">
+                            <img src="4.jpg" alt="Vikram M.">
+                        </div>
+                        <div class="name-section">
+                            <span class="driver-name">Vikram M.</span>
+                            <span class="platform-icon">✕</span>
+                            <span class="handle">AeLaMj</span>
+                        </div>
+                    </div>
+                    <div class="stats-section">
+                        <span class="win-ratio"><span class="wins">329</span>/<span class="losses">153</span></span>
+                        <div class="pnl-section">
+                            <div class="xrp-amount">+305.22 XRP</div>
+                            <div class="usd-amount">($54,526.3)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rank 5 -->
+                <div class="leaderboard-item">
+                    <div class="rank-section">
+                        <div class="rank-number">5</div>
+                        <div class="profile-pic">
+                            <img src="5.jpg" alt="Arjun T.">
+                        </div>
+                        <div class="name-section">
+                            <span class="driver-name">Arjun T.</span>
+                            <span class="platform-icon">✕</span>
+                            <span class="handle">9EyPAM</span>
+                        </div>
+                    </div>
+                    <div class="stats-section">
+                        <span class="win-ratio"><span class="wins">11</span>/<span class="losses">16</span></span>
+                        <div class="pnl-section">
+                            <div class="xrp-amount">+226.44 XRP</div>
+                            <div class="usd-amount">($40,453.2)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rank 6 -->
+                <div class="leaderboard-item">
+                    <div class="rank-section">
+                        <div class="rank-number">6</div>
+                        <div class="profile-pic">
+                            <img src="6.jpg" alt="Rajesh P.">
+                        </div>
+                        <div class="name-section">
+                            <span class="driver-name">Rajesh P.</span>
+                            <span class="platform-icon">✕</span>
+                            <span class="handle">4pqD14</span>
+                        </div>
+                    </div>
+                    <div class="stats-section">
+                        <span class="win-ratio"><span class="wins">2</span>/<span class="losses">5</span></span>
+                        <div class="pnl-section">
+                            <div class="xrp-amount">+165.16 XRP</div>
+                            <div class="usd-amount">($29,504.8)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rank 7 -->
+                <div class="leaderboard-item">
+                    <div class="rank-section">
+                        <div class="rank-number">7</div>
+                        <div class="profile-pic">
+                            <img src="7.jpg" alt="Rohit G.">
+                        </div>
+                        <div class="name-section">
+                            <span class="driver-name">Rohit G.</span>
+                            <span class="platform-icon">✕</span>
+                            <span class="handle">3LYtEm</span>
+                        </div>
+                    </div>
+                    <div class="stats-section">
+                        <span class="win-ratio"><span class="wins">83</span>/<span class="losses">19</span></span>
+                        <div class="pnl-section">
+                            <div class="xrp-amount">+155.09 XRP</div>
+                            <div class="usd-amount">($27,706.7)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rank 8 -->
+                <div class="leaderboard-item">
+                    <div class="rank-section">
+                        <div class="rank-number">8</div>
+                        <div class="profile-pic">
+                            <img src="8.jpg" alt="Deepak S.">
+                        </div>
+                        <div class="name-section">
+                            <span class="driver-name">Deepak S.</span>
+                            <span class="platform-icon">✕</span>
+                            <span class="handle">215nhc</span>
+                        </div>
+                    </div>
+                    <div class="stats-section">
+                        <span class="win-ratio"><span class="wins">10</span>/<span class="losses">11</span></span>
+                        <div class="pnl-section">
+                            <div class="xrp-amount">+148.91 XRP</div>
+                            <div class="usd-amount">($26,601.9)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rank 9 -->
+                <div class="leaderboard-item">
+                    <div class="rank-section">
+                        <div class="rank-number">9</div>
+                        <div class="profile-pic">
+                            <img src="9.jpg" alt="Suresh K.">
+                        </div>
+                        <div class="name-section">
+                            <span class="driver-name">Suresh K.</span>
+                            <span class="platform-icon">✕</span>
+                            <span class="handle">86AEJE</span>
+                        </div>
+                    </div>
+                    <div class="stats-section">
+                        <span class="win-ratio"><span class="wins">43</span>/<span class="losses">68</span></span>
+                        <div class="pnl-section">
+                            <div class="xrp-amount">+117.06 XRP</div>
+                            <div class="usd-amount">($20,911.3)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rank 10 -->
+                <div class="leaderboard-item">
+                    <div class="rank-section">
+                        <div class="rank-number">10</div>
+                        <div class="profile-pic">
+                            <img src="10.jpg" alt="Anil B.">
+                        </div>
+                        <div class="name-section">
+                            <span class="driver-name">Anil B.</span>
+                            <span class="platform-icon">✕</span>
+                            <span class="handle">BTf4A2</span>
+                        </div>
+                    </div>
+                    <div class="stats-section">
+                        <span class="win-ratio"><span class="wins">92</span>/<span class="losses">162</span></span>
+                        <div class="pnl-section">
+                            <div class="xrp-amount">+110.46 XRP</div>
+                            <div class="usd-amount">($19,733.9)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rank 11 -->
+                <div class="leaderboard-item">
+                    <div class="rank-section">
+                        <div class="rank-number">11</div>
+                        <div class="profile-pic">
+                            <img src="11.jpg" alt="Ravi N.">
+                        </div>
+                        <div class="name-section">
+                            <span class="driver-name">Ravi N.</span>
+                            <span class="platform-icon">✕</span>
+                            <span class="telegram-icon">🔵</span>
+                            <span class="handle">xXpRSp</span>
+                        </div>
+                    </div>
+                    <div class="stats-section">
+                        <span class="win-ratio"><span class="wins">40</span>/<span class="losses">41</span></span>
+                        <div class="pnl-section">
+                            <div class="xrp-amount">+102.87 XRP</div>
+                            <div class="usd-amount">($18,376.4)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rank 12 -->
+                <div class="leaderboard-item">
+                    <div class="rank-section">
+                        <div class="rank-number">12</div>
+                        <div class="profile-pic">
+                            <img src="12.jpg" alt="Ramesh D.">
+                        </div>
+                        <div class="name-section">
+                            <span class="driver-name">Ramesh D.</span>
+                            <span class="platform-icon">✕</span>
+                            <span class="handle">m7Kaas</span>
+                        </div>
+                    </div>
+                    <div class="stats-section">
+                        <span class="win-ratio"><span class="wins">1</span>/<span class="losses">3</span></span>
+                        <div class="pnl-section">
+                            <div class="xrp-amount">+97.01 XRP</div>
+                            <div class="usd-amount">($17,329.5)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rank 13 -->
+                <div class="leaderboard-item">
+                    <div class="rank-section">
+                        <div class="rank-number">13</div>
+                        <div class="profile-pic">
+                            <img src="13.jpg" alt="Pradeep J.">
+                        </div>
+                        <div class="name-section">
+                            <span class="driver-name">Pradeep J.</span>
+                            <span class="platform-icon">✕</span>
+                            <span class="handle">5XVKfr</span>
+                        </div>
+                    </div>
+                    <div class="stats-section">
+                        <span class="win-ratio"><span class="wins">9</span>/<span class="losses">11</span></span>
+                        <div class="pnl-section">
+                            <div class="xrp-amount">+90.89 XRP</div>
+                            <div class="usd-amount">($16,226.7)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rank 14 -->
+                <div class="leaderboard-item">
+                    <div class="rank-section">
+                        <div class="rank-number">14</div>
+                        <div class="profile-pic">
+                            <img src="14.jpg" alt="Naveen R.">
+                        </div>
+                        <div class="name-section">
+                            <span class="driver-name">Naveen R.</span>
+                            <span class="platform-icon">✕</span>
+                            <span class="telegram-icon">🔵</span>
+                            <span class="handle">3h65Mm</span>
+                        </div>
+                    </div>
+                    <div class="stats-section">
+                        <span class="win-ratio"><span class="wins">45</span>/<span class="losses">126</span></span>
+                        <div class="pnl-section">
+                            <div class="xrp-amount">+86.41 XRP</div>
+                            <div class="usd-amount">($15,426.3)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rank 15 -->
+                <div class="leaderboard-item">
+                    <div class="rank-section">
+                        <div class="rank-number">15</div>
+                        <div class="profile-pic">
+                            <img src="15.jpg" alt="Kiran L.">
+                        </div>
+                        <div class="name-section">
+                            <span class="driver-name">Kiran L.</span>
+                            <span class="platform-icon">✕</span>
+                            <span class="handle">3pZ59Y</span>
+                        </div>
+                    </div>
+                    <div class="stats-section">
+                        <span class="win-ratio"><span class="wins">71</span>/<span class="losses">66</span></span>
+                        <div class="pnl-section">
+                            <div class="xrp-amount">+82.64 XRP</div>
+                            <div class="usd-amount">($14,752.3)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rank 16 -->
+                <div class="leaderboard-item">
+                    <div class="rank-section">
+                        <div class="rank-number">16</div>
+                        <div class="profile-pic">
+                            <img src="16.jpg" alt="Manoj A.">
+                        </div>
+                        <div class="name-section">
+                            <span class="driver-name">Manoj A.</span>
+                            <span class="platform-icon">✕</span>
+                            <span class="handle">BCagck</span>
+                        </div>
+                    </div>
+                    <div class="stats-section">
+                        <span class="win-ratio"><span class="wins">143</span>/<span class="losses">174</span></span>
+                        <div class="pnl-section">
+                            <div class="xrp-amount">+76.09 XRP</div>
+                            <div class="usd-amount">($13,584.4)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rank 17 -->
+                <div class="leaderboard-item">
+                    <div class="rank-section">
+                        <div class="rank-number">17</div>
+                        <div class="profile-pic">
+                            <img src="17.jpg" alt="Ashok V.">
+                        </div>
+                        <div class="name-section">
+                            <span class="driver-name">Ashok V.</span>
+                            <span class="platform-icon">✕</span>
+                            <span class="handle">UxuuMe</span>
+                        </div>
+                    </div>
+                    <div class="stats-section">
+                        <span class="win-ratio"><span class="wins">33</span>/<span class="losses">36</span></span>
+                        <div class="pnl-section">
+                            <div class="xrp-amount">+74.36 XRP</div>
+                            <div class="usd-amount">($13,274.0)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rank 18 -->
+                <div class="leaderboard-item">
+                    <div class="rank-section">
+                        <div class="rank-number">18</div>
+                        <div class="profile-pic">
+                            <img src="18.jpg" alt="Sanjay H.">
+                        </div>
+                        <div class="name-section">
+                            <span class="driver-name">Sanjay H.</span>
+                            <span class="platform-icon">✕</span>
+                            <span class="handle">GJyhzL</span>
+                        </div>
+                    </div>
+                    <div class="stats-section">
+                        <span class="win-ratio"><span class="wins">17</span>/<span class="losses">11</span></span>
+                        <div class="pnl-section">
+                            <div class="xrp-amount">+62.10 XRP</div>
+                            <div class="usd-amount">($11,085.7)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rank 19 -->
+                <div class="leaderboard-item">
+                    <div class="rank-section">
+                        <div class="rank-number">19</div>
+                        <div class="profile-pic">
+                            <img src="19.jpg" alt="Gopal C.">
+                        </div>
+                        <div class="name-section">
+                            <span class="driver-name">Gopal C.</span>
+                            <span class="platform-icon">✕</span>
+                            <span class="handle">Di75xb</span>
+                        </div>
+                    </div>
+                    <div class="stats-section">
+                        <span class="win-ratio"><span class="wins">31</span>/<span class="losses">24</span></span>
+                        <div class="pnl-section">
+                            <div class="xrp-amount">+60.29 XRP</div>
+                            <div class="usd-amount">($10,763.8)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rank 20 -->
+                <div class="leaderboard-item">
+                    <div class="rank-section">
+                        <div class="rank-number">20</div>
+                        <div class="profile-pic">
+                            <img src="20.jpg" alt="Vinod W.">
+                        </div>
+                        <div class="name-section">
+                            <span class="driver-name">Vinod W.</span>
+                            <span class="platform-icon">✕</span>
+                            <span class="handle">EHg5Yk</span>
+                        </div>
+                    </div>
+                    <div class="stats-section">
+                        <span class="win-ratio"><span class="wins">40</span>/<span class="losses">39</span></span>
+                        <div class="pnl-section">
+                            <div class="xrp-amount">+59.39 XRP</div>
+                            <div class="usd-amount">($10,601.7)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                © 2025 UBERscan. All rights reserved. | Privacy | Terms of Use
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Copy contract address to clipboard
+        function copyToClipboard() {
+            const address = "7xKXtg2CW9zAkf9y1Dddq3";
+            navigator.clipboard.writeText(address).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '✅';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                }, 2000);
+            });
+        }
+
+        // Filter leaderboard by time period
+        function filterLeaderboard(period) {
+            // Remove active class from all buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+
+            // Base driver data
+            const baseDrivers = [
+                {name: "Pajeet P.", handle: "JDd3hy", img: "1.jpg"},
+                {name: "Raj S.", handle: "suqh5s", img: "2.jpg", telegram: true},
+                {name: "Sandeep K.", handle: "CyaE1V", img: "3.jpg"},
+                {name: "Vikram M.", handle: "AeLaMj", img: "4.jpg"},
+                {name: "Arjun T.", handle: "9EyPAM", img: "5.jpg"},
+                {name: "Rajesh P.", handle: "4pqD14", img: "6.jpg"},
+                {name: "Rohit G.", handle: "3LYtEm", img: "7.jpg"},
+                {name: "Deepak S.", handle: "215nhc", img: "8.jpg"},
+                {name: "Suresh K.", handle: "86AEJE", img: "9.jpg"},
+                {name: "Anil B.", handle: "BTf4A2", img: "10.jpg"},
+                {name: "Ravi N.", handle: "xXpRSp", img: "11.jpg", telegram: true},
+                {name: "Ramesh D.", handle: "m7Kaas", img: "12.jpg"},
+                {name: "Pradeep J.", handle: "5XVKfr", img: "13.jpg"},
+                {name: "Naveen R.", handle: "3h65Mm", img: "14.jpg", telegram: true},
+                {name: "Kiran L.", handle: "3pZ59Y", img: "15.jpg"},
+                {name: "Manoj A.", handle: "BCagck", img: "16.jpg"},
+                {name: "Ashok V.", handle: "UxuuMe", img: "17.jpg"},
+                {name: "Sanjay H.", handle: "GJyhzL", img: "18.jpg"},
+                {name: "Gopal C.", handle: "Di75xb", img: "19.jpg"},
+                {name: "Vinod W.", handle: "EHg5Yk", img: "20.jpg"}
+            ];
+
+            // Generate different data for each period
+            let shuffledDrivers = [...baseDrivers];
+            
+            if (period === 'weekly') {
+                // Shuffle for weekly - different order
+                shuffledDrivers = [
+                    baseDrivers[5], baseDrivers[2], baseDrivers[8], baseDrivers[0], baseDrivers[12],
+                    baseDrivers[7], baseDrivers[15], baseDrivers[3], baseDrivers[10], baseDrivers[18],
+                    baseDrivers[1], baseDrivers[13], baseDrivers[6], baseDrivers[19], baseDrivers[4],
+                    baseDrivers[11], baseDrivers[16], baseDrivers[9], baseDrivers[14], baseDrivers[17]
+                ];
+            } else if (period === 'monthly') {
+                // Shuffle for monthly - different order
+                shuffledDrivers = [
+                    baseDrivers[11], baseDrivers[7], baseDrivers[1], baseDrivers[14], baseDrivers[3],
+                    baseDrivers[19], baseDrivers[4], baseDrivers[9], baseDrivers[16], baseDrivers[2],
+                    baseDrivers[6], baseDrivers[12], baseDrivers[0], baseDrivers[18], baseDrivers[8],
+                    baseDrivers[13], baseDrivers[5], baseDrivers[17], baseDrivers[10], baseDrivers[15]
+                ];
+            }
+
+            // Generate amounts and stats based on period
+            const leaderboardData = shuffledDrivers.map((driver, index) => {
+                const baseAmount = period === 'monthly' ? 1500 : period === 'weekly' ? 800 : 400;
+                const randomAmount = (baseAmount - (index * 15) + Math.random() * 100).toFixed(2);
+                const randomWins = Math.floor(Math.random() * 300) + 10;
+                const randomLosses = Math.floor(Math.random() * 200) + 5;
+                
+                return {
+                    rank: index + 1,
+                    name: driver.name,
+                    handle: driver.handle,
+                    img: driver.img,
+                    wins: randomWins,
+                    losses: randomLosses,
+                    amount: parseFloat(randomAmount),
+                    usd: (parseFloat(randomAmount) * 178.64).toFixed(1),
+                    telegram: driver.telegram
+                };
+            });
+
+            // Update the DOM
+            updateLeaderboardDisplay(leaderboardData);
+        }
+
+        function updateLeaderboardDisplay(data) {
+            const leaderboardList = document.querySelector('.leaderboard-list');
+            leaderboardList.innerHTML = '';
+
+            data.forEach((driver, index) => {
+                const isFirst = index === 0;
+                const itemClass = isFirst ? 'leaderboard-item rank-1' : 'leaderboard-item';
+                
+                const telegramIcon = driver.telegram ? '<span class="telegram-icon">🔵</span>' : '';
+                const rankDisplay = isFirst ? '<div class="trophy">🏆</div>' : `<div class="rank-number">${driver.rank}</div>`;
+                
+                const itemHTML = `
+                    <div class="${itemClass}">
+                        <div class="rank-section">
+                            ${rankDisplay}
+                            <div class="profile-pic">
+                                <img src="${driver.img}" alt="${driver.name}">
+                            </div>
+                            <div class="name-section">
+                                <span class="driver-name">${driver.name}</span>
+                                <span class="platform-icon">✕</span>
+                                ${telegramIcon}
+                                <span class="handle">${driver.handle}</span>
+                            </div>
+                        </div>
+                        <div class="stats-section">
+                            <span class="win-ratio"><span class="wins">${driver.wins}</span>/<span class="losses">${driver.losses}</span></span>
+                            <div class="pnl-section">
+                                <div class="xrp-amount">+${driver.amount} XRP</div>
+                                <div class="usd-amount">($${driver.usd})</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                leaderboardList.innerHTML += itemHTML;
+            });
+        }
+    </script>
+</body>
+</html> 

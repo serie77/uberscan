@@ -1,0 +1,493 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0a0a0a;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+    padding: 20px 0;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+.price-badge {
+    display: flex;
+    align-items: center;
+    background: #1a1a1a;
+    border: 1px solid #333333;
+    border-radius: 20px;
+    padding: 8px 16px;
+    gap: 8px;
+}
+
+.close-icon {
+    color: #666666;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.price {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-link {
+    color: #888888;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 0;
+    transition: color 0.2s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+.nav-link.active {
+    color: #ffffff;
+    border-bottom-color: #4285f4;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-icon, .settings-icon {
+    font-size: 20px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.connect-wallet-btn {
+    background: #4285f4;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.connect-wallet-btn:hover {
+    background: #3367d6;
+}
+
+.ca-box {
+    display: flex;
+    align-items: center;
+    background: #1a1a1a;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    padding: 6px 12px;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.ca-label {
+    color: #888888;
+    font-weight: 500;
+}
+
+.ca-address {
+    color: #ffffff;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    background: #0a0a0a;
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid #2a2a2a;
+}
+
+.copy-btn {
+    background: transparent;
+    border: none;
+    color: #888888;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 2px;
+    transition: color 0.2s ease;
+}
+
+.copy-btn:hover {
+    color: #ffffff;
+}
+
+/* Footer */
+.footer {
+    margin-top: 60px;
+    padding: 30px 0;
+    border-top: 1px solid #2a2a2a;
+    text-align: center;
+}
+
+.footer-content {
+    color: #888888;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Main Content */
+.main-content {
+    padding: 30px 0;
+}
+
+.tagline-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.tagline {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(135deg, #4285f4, #34a853);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.leaderboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.leaderboard-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.time-filters {
+    display: flex;
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 4px;
+    gap: 4px;
+}
+
+.filter-btn {
+    background: transparent;
+    border: none;
+    color: #888888;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-btn.active {
+    background: #333333;
+    color: #ffffff;
+}
+
+.filter-btn:hover:not(.active) {
+    color: #cccccc;
+}
+
+/* Leaderboard Items */
+.leaderboard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.leaderboard-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2a2a2a;
+    border: 1px solid #3a3a3a;
+    border-radius: 12px;
+    padding: 16px 20px;
+    transition: all 0.2s ease;
+}
+
+.leaderboard-item:hover {
+    background: #333333;
+    border-color: #444444;
+}
+
+.leaderboard-item.rank-1 {
+    background: linear-gradient(135deg, #4a3c00, #2a2a2a);
+    border-color: #6a5500;
+}
+
+.rank-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.trophy {
+    font-size: 20px;
+}
+
+.rank-number {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    min-width: 20px;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #555555;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name-section {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.driver-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.platform-icon {
+    color: #666666;
+    font-size: 14px;
+}
+
+.telegram-icon {
+    color: #0088cc;
+    font-size: 12px;
+}
+
+.handle {
+    color: #888888;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.stats-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.win-ratio {
+    font-size: 14px;
+    color: #888888;
+    min-width: 60px;
+}
+
+.wins {
+    color: #00d084;
+}
+
+.losses {
+    color: #ff4d4f;
+}
+
+.total {
+    color: #888888;
+}
+
+.pnl-section {
+    text-align: right;
+}
+
+.xrp-amount {
+    font-size: 16px;
+    font-weight: 600;
+    color: #00d084;
+    margin-bottom: 2px;
+}
+
+.usd-amount {
+    font-size: 13px;
+    color: #00d084;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+    
+    .header-content {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    
+    .nav-menu {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 24px;
+    }
+    
+    .header-actions {
+        gap: 16px;
+    }
+    
+    .connect-wallet-btn {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+    
+    .leaderboard-header {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    
+    .tagline {
+        font-size: 28px;
+    }
+    
+    .leaderboard-title {
+        font-size: 24px;
+    }
+    
+    .time-filters {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .leaderboard-item {
+        padding: 12px 16px;
+    }
+    
+    .rank-section {
+        gap: 10px;
+    }
+    
+    .stats-section {
+        gap: 12px;
+    }
+    
+    .driver-name {
+        font-size: 14px;
+    }
+    
+    .handle {
+        font-size: 12px;
+    }
+    
+    .win-ratio {
+        font-size: 12px;
+        min-width: 50px;
+    }
+    
+    .xrp-amount {
+        font-size: 14px;
+    }
+    
+    .usd-amount {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    
+    .logo-section {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    .tagline {
+        font-size: 24px;
+    }
+
+    .ca-box {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+
+    .ca-address {
+        font-size: 10px;
+        padding: 1px 4px;
+    }
+    
+    .leaderboard-item {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+    
+    .rank-section {
+        justify-content: center;
+    }
+    
+    .stats-section {
+        justify-content: center;
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .pnl-section {
+        text-align: center;
+    }
+} 
